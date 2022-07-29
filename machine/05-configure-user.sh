@@ -4,6 +4,8 @@ set -eu
 
 sudo useradd \
     -m \
-    -p $6$ts:1659048158:$uTxYH1Q5StB3xAjuOPpREeVkrqb8Q2/Dosm1PVRCj1RlmctRjPxuGd7SsSV9a3A5AmnQ86UkIB3xmURWBsZBB/ \
+    -p '$6$1659052059$M9pnSDGYdkzT9Gq6quAaaxxY8KRHGyD1SmUNcYYhmvQ3NyQyZ8RQ3xG93op647vp8eHAP1VfsJnmWxHl8kiT10' \
     -s $(which zsh) \
     gordon
+
+sudo usermod -aG sudo gordon
