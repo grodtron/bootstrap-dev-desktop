@@ -8,10 +8,11 @@ cd $HOME
 
 git clone --bare https://github.com/grodtron/dotfiles.git $HOME/$DOTFILES_GIT_REPO_DIR_NAME
 
-alias dotfile-git="git --git-dir '$HOME/$DOTFILES_GIT_REPO_DIR_NAME' --work-tree '$HOME'"
+# I wanted to use an alias here, but for some reason it was not working...
+dotfilegit="git --git-dir $HOME/$DOTFILES_GIT_REPO_DIR_NAME --work-tree $HOME"
 
-dotfile-git checkout
-dotfile-git submodule init
-dotfile-git submodule update
-dotfile-git config status.showUntrackedFiles no
+$dotfilegit checkout
+$dotfilegit submodule init
+$dotfilegit submodule update
+$dotfilegit config status.showUntrackedFiles no
 
