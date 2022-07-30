@@ -14,5 +14,12 @@ dotfilegit="git --git-dir $HOME/$DOTFILES_GIT_REPO_DIR_NAME --work-tree $HOME"
 $dotfilegit checkout
 $dotfilegit submodule init
 $dotfilegit submodule update
-$dotfilegit config status.showUntrackedFiles no
 
+# Set the upstream of our mainline to origin mainline
+$dotfilegit config status.showUntrackedFiles no
+$dotfilegit config remote.origin.fetch 'refs/heads/*:refs/remotes/origin/*'
+$dotfilegit fetch origin
+$dotfilegit branch --set-upstream-to origin/mainline mainline
+
+# Once everything is bootstrapped, then we would want to use the SSH URL
+$dotfilegit remote set-url git@github.com:grodtron/dotfiles.git
