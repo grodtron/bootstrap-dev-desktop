@@ -22,4 +22,4 @@ $dotfilegit fetch origin
 $dotfilegit branch --set-upstream-to origin/mainline mainline
 
 # Once everything is bootstrapped, then we would want to use the SSH URL
-$dotfilegit remote set-url git@github.com:grodtron/dotfiles.git
+$dotfilegit remote set-url origin git@github.com:grodtron/dotfiles.git
