@@ -7,7 +7,7 @@ set -eu
 # Add deb for LLVM / Clang 15
 
 # See https://askubuntu.com/a/1300076 on all this key wrangling
-wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key
+wget https://apt.llvm.org/llvm-snapshot.gpg.key
 
 sudo mkdir -p /etc/keys/
 
