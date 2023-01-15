@@ -17,7 +17,7 @@ gpg --no-default-keyring --keyring ./llvm_keyring.gpg --export > ./llvm-snapshot
 sudo cp ./llvm-snapshot.gpg /etc/keys/llvm-snapshot.gpg
 
 echo "deb [signed-by=/etc/keys/llvm-snapshot.gpg] http://apt.llvm.org/jammy/ llvm-toolchain-jammy-15 main" | \
-   tee --append /etc/apt/sources.list
+   sudo tee --append /etc/apt/sources.list
 
 #########
 
