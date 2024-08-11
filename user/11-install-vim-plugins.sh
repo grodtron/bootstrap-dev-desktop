@@ -2,4 +2,4 @@
 
 set -eu
 
-vim +PluginInstall +qall 2>/dev/null 1>/dev/null
+vim -es -c ':PluginInstall' -c ':qall'
