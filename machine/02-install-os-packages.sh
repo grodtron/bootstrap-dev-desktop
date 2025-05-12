@@ -52,4 +52,5 @@ sudo apt-get install -y \
     zsh \
     terraform \
 
-
+# Set up clang to be used as `cc`
+sudo update-alternatives --install  /usr/bin/cc cc /usr/bin/clang-16 20
